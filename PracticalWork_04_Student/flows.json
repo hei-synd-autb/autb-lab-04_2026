@@ -2,7 +2,7 @@
     {
         "id": "95204e97af393e23",
         "type": "tab",
-        "label": "Lab 03 Sensor",
+        "label": "Lab 04 Gripper",
         "disabled": false,
         "info": "",
         "env": []
@@ -176,78 +176,6 @@
         "h": 202
     },
     {
-        "id": "fab458635840f194",
-        "type": "group",
-        "z": "66b713bff26c6577",
-        "g": "da63248a1cc4b4af",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "1e189ecd802172e5",
-            "602f4c0ed027a896",
-            "6243fa7ea09362a4"
-        ],
-        "x": 294,
-        "y": 599,
-        "w": 572,
-        "h": 82
-    },
-    {
-        "id": "b4acbb4fa910b71d",
-        "type": "group",
-        "z": "66b713bff26c6577",
-        "g": "da63248a1cc4b4af",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "52bfe6c137bd1644",
-            "3c3321ef3d105be0",
-            "575b8dd8c92560ac"
-        ],
-        "x": 294,
-        "y": 719,
-        "w": 572,
-        "h": 82
-    },
-    {
-        "id": "399266970ed3c8d1",
-        "type": "group",
-        "z": "66b713bff26c6577",
-        "g": "da63248a1cc4b4af",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "f8c71b02e2e6a3cf",
-            "35519cde47a513a6",
-            "059ec5ae6fe47060"
-        ],
-        "x": 294,
-        "y": 859,
-        "w": 572,
-        "h": 82
-    },
-    {
         "id": "0b01b5112b73520c",
         "type": "group",
         "z": "016306c2d57be25e",
@@ -379,6 +307,78 @@
         "y": 619,
         "w": 592,
         "h": 462
+    },
+    {
+        "id": "fab458635840f194",
+        "type": "group",
+        "z": "66b713bff26c6577",
+        "g": "da63248a1cc4b4af",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1e189ecd802172e5",
+            "602f4c0ed027a896",
+            "6243fa7ea09362a4"
+        ],
+        "x": 294,
+        "y": 599,
+        "w": 572,
+        "h": 82
+    },
+    {
+        "id": "b4acbb4fa910b71d",
+        "type": "group",
+        "z": "66b713bff26c6577",
+        "g": "da63248a1cc4b4af",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "52bfe6c137bd1644",
+            "3c3321ef3d105be0",
+            "575b8dd8c92560ac"
+        ],
+        "x": 294,
+        "y": 719,
+        "w": 572,
+        "h": 82
+    },
+    {
+        "id": "399266970ed3c8d1",
+        "type": "group",
+        "z": "66b713bff26c6577",
+        "g": "da63248a1cc4b4af",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "f8c71b02e2e6a3cf",
+            "35519cde47a513a6",
+            "059ec5ae6fe47060"
+        ],
+        "x": 294,
+        "y": 859,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "8966a7b403a8fb88",
