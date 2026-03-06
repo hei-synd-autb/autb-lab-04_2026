@@ -9,7 +9,7 @@
 Cours AutB
 
 Author: [Cédric Lenoir](mailto:cedric.lenoir@hevs.ch)
-> Version 2025, V1.0
+> Version 2026, V1.0
 
 # LAB 04 Programmierung eines Funktionsblocks (FB), der einen Aktuator steuert.
 
