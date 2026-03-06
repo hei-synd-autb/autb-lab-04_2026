@@ -9,7 +9,7 @@
 Cours AutB
 
 Author: [Cédric Lenoir](mailto:cedric.lenoir@hevs.ch)
-> Version 2025, V1.0 
+> Version 2026, V1.0 
 
 # LAB 04 Programmation d'un bloc fonctionnel (FB) qui gère un actionneur
 
