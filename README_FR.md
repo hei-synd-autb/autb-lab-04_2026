@@ -134,7 +134,7 @@ Programmer deux blocs fonctionnels (FB) basés sur le modèle **Execute** qui co
 ***Prérequis :***
 Afin de désactiver la gestion de la pince qui est déjà implémentée dans le programme mis à disposition, supprimer ``PRG_DeviceManager`` sous Task Configuration --> MainTask (IEC-Tasks).
 
-> Normally with last version, no more needed to delete ``PRG_DeviceManager``.
+
 
 <br>
 
@@ -237,11 +237,21 @@ Déclaration de la structure :
 ```iecst
 TYPE ST_TestFbGripperHmi :
 STRUCT
-	openGripper			: BOOL;
-	closeGripper			: BOOL;
+	openGripper             : BOOL;
+	closeGripper            : BOOL;
+	executeOpenDone         : BOOL;
+	executeCloseDone        : BOOL;
+	gripperStateClosed      : BOOL;
+	gripperStateOpen        : BOOL;
+	gripperStatePartPresent : BOOL;
+	gripperStateError       : BOOL;
+	gripperStateInOp        : BOOL;
+	reSensorGripper         : REAL;
 END_STRUCT
 END_TYPE
 ```
+
+<u>Remarque </u>: certains membres de la structure seront utilisés dans la deuxième partie du travail pratique.
 
 <br>
 Utilisation de la variable structurée dans le programme :
@@ -317,14 +327,6 @@ Dashboard :
 </figure>
 
 <br>
-Code :
-<figure>
-    <img src="./img/NodeRedCodeForGripper.png"
-         alt="Lost image :ENodeRedCodeForGripper">
-    <figcaption>Programme de test dans Node-RED</figcaption>
-</figure>
-
-
 
 
 
@@ -437,22 +439,8 @@ fbGripperState(Enable := TRUE,
 La vérification du fonctionnement du FB pourra être réalisée via un "Dashboard" implémenté avec Node-RED.
 
 <u>Information </u>:
-Vous pouvez compléter le DUT (Data User Type) de type STRUCT créer dans l'exercice précédent pour vous aider à lire les paramètres de sortie du FB.
+Vous pouvez utiliser le DUT de type STRUCT "ST_TestFbGripperHmi" créé dans l'exercice précédent pour vous aider à lire les paramètres de sortie du FB.
 
-Déclaration de la structure :
-```iecst
-TYPE ST_TestFbGripperHmi :
-STRUCT
-	openGripper			: BOOL;
-	closeGripper			: BOOL;
-	gripperStateClosed		: BOOL;
-	gripperStateOpen		: BOOL;
-	gripperStatePartPresent	   	: BOOL;
-	gripperStateError		: BOOL;
-	gripperStateInOp		: BOOL;
-END_STRUCT
-END_TYPE
-```
 
 <br>
 

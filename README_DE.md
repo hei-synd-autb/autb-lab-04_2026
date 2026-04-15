@@ -132,7 +132,6 @@ Programmieren Sie zwei Funktionsblöcke (FB), die auf dem **Execute**-Modell bas
 ***Voraussetzung:***
 Um die Zangenverwaltung zu deaktivieren, die bereits in dem zur Verfügung gestellten Programm implementiert ist, löschen Sie ``PRG_DeviceManager`` unter Task Configuration --> MainTask (IEC-Tasks).
 
-> Normally with last version, no more needed to delete ``PRG_DeviceManager``.
 
 <br>
 
@@ -235,11 +234,21 @@ Deklaration der Struktur :
 ```iecst
 TYPE ST_TestFbGripperHmi :
 STRUCT
-	openGripper			: BOOL;
-	closeGripper			: BOOL;
+	openGripper             : BOOL;
+	closeGripper            : BOOL;
+	executeOpenDone         : BOOL;
+	executeCloseDone        : BOOL;
+	gripperStateClosed      : BOOL;
+	gripperStateOpen        : BOOL;
+	gripperStatePartPresent : BOOL;
+	gripperStateError       : BOOL;
+	gripperStateInOp        : BOOL;
+	reSensorGripper         : REAL;
 END_STRUCT
 END_TYPE
 ```
+
+<u>Anmerkung </u>: Einige Elemente der Struktur werden im zweiten Teil der praktischen Arbeit verwendet.
 
 <br>
 Verwendung der strukturierten Variable im Programm :
@@ -315,13 +324,6 @@ Dashboard :
 </figure>
 
 <br>
-Code :
-<figure>
-    <img src="./img/NodeRedCodeForGripper.png"
-         alt="Lost image :ENodeRedCodeForGripper">
-    <figcaption>Testprogramm in Node-RED</figcaption>
-</figure>
-
 
 
 
@@ -436,25 +438,12 @@ fbGripperState(Enable := TRUE,
 Die Überprüfung der Funktionsweise des FB kann über ein „Dashboard“ erfolgen, das mit Node-RED implementiert wurde.
 
 <u>Information </u>:
-Sie können den in der vorherigen Übung erstellten DUT (Data User Type) vom Typ STRUCT ergänzen, um Ihnen beim Lesen der Ausgabeparameter des FBs zu helfen.
+Sie können die in der vorherigen Übung erstellte DUT vom Typ STRUCT „ST_TestFbGripperHmi“ verwenden, um die Ausgangsparameter des FB auszulesen.
 
-Deklaration der Struktur :
-```iecst
-TYPE ST_TestFbGripperHmi :
-STRUCT
-	openGripper			: BOOL;
-	closeGripper			: BOOL;
-	gripperStateClosed		: BOOL;
-	gripperStateOpen		: BOOL;
-	gripperStatePartPresent	   	: BOOL;
-	gripperStateError		: BOOL;
-	gripperStateInOp		: BOOL;
-END_STRUCT
-END_TYPE
-```
 
 <br>
 Verwendung der strukturierten Variable im Programm :
+
 ```iecst
 stTestFbGripperHmi.gripperStateClosed := ...
 stTestFbGripperHmi.gripperStateOpen := ...
